@@ -18,18 +18,24 @@ const today = (() => {
  * @returns {string}
  */
 const getXML = async (guid, keyword) => {
-  const startDate = '9/8/2017';
-  const endDate = today;
-  const response = await fetch(
-    'http://www.repleotech.com/gateway/xml_opt_in_list.asp?' +
-      `guid=${guid}` +
-      `&keyword=${keyword}` +
-      `&startdate=${startDate}` +
-      `&enddate=${endDate}`,
-  );
-  const xml = await response.text();
+  try {
+    const startDate = '9/8/2017';
+    const endDate = today;
+    const response = await fetch(
+      'http://www.repleotech.com/gateway/xml_opt_in_list.asp?' +
+        `guid=${guid}` +
+        `&keyword=${keyword}` +
+        `&startdate=${startDate}` +
+        `&enddate=${endDate}`,
+    );
+    const xml = await response.text();
 
-  return xml;
+    return xml;
+  } catch (error) {
+    console.error(error);
+
+    return '';
+  }
 };
 
 /**
