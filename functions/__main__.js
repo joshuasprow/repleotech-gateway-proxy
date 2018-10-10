@@ -18,7 +18,7 @@ const today = (() => {
  * @returns {string}
  */
 const getXML = async (guid, keyword) => {
-  const startDate = '9/8/2018';
+  const startDate = '9/8/2017';
   const endDate = today;
   const response = await fetch(
     'http://www.repleotech.com/gateway/xml_opt_in_list.asp?' +
