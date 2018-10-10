@@ -1,0 +1,14 @@
+{
+  "name": "repleotech-gateway-proxy",
+  "version": "0.0.2",
+  "author": "jsprow",
+  "stdlib": {
+    "name": "jsprow/repleotech-gateway-proxy",
+    "publish": true,
+    "timeout": 10000
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "xmldom": "^0.1.27"
+  }
+}
